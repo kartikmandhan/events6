@@ -271,7 +271,7 @@
 }
 .img {
   position: relative;
-  z-index: -10;
+  /* z-index: ; */
   background: var(--bg-color);
   background: var(--bg-color1);
   width: 200px;
@@ -327,4 +327,30 @@
 
 .title-black {
   color: black;
+}
+.cardAnchor {
+  border: 10px solid #fff;
+}
+.eventTitle {
+  margin-top: 0.5rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.aboutEvent {
+  padding: 10px;
+  font-size: 18px;
+  color: wheat;
+  font-weight: 900;
+}
+.eventCard {
+  display: flex;
+  width: 250px;
+  background: var(--bg-color);
+  background: var(--bg-color1);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

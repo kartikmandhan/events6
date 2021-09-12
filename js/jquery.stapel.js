@@ -549,7 +549,7 @@
                 : {
                     zIndex: 1,
                     transition: this.support
-                      ? "opacity " +
+                      ? "display " +
                         this.options.otherPileAnimation.closeSpeed +
                         "ms " +
                         this.options.otherPileAnimation.closeEasing
@@ -621,7 +621,7 @@
               )
             : this._applyTransition(
                 $item,
-                { opacity: 0 },
+                { display: "none" },
                 this.options.otherPileAnimation.closeSpeed
               );
         }
@@ -670,7 +670,7 @@
                     }
                   : {
                       transition: this.support
-                        ? "opacity " +
+                        ? "display " +
                           this.options.otherPileAnimation.openSpeed +
                           "ms " +
                           this.options.otherPileAnimation.openEasing
@@ -731,7 +731,7 @@
                 )
               : this._applyTransition(
                   $item,
-                  { opacity: 1 },
+                  { display: "block" },
                   this.options.otherPileAnimation.openSpeed,
                   function (evt) {
                     var target = this.target || this.nodeName;
