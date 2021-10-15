@@ -1,25 +1,5 @@
-/**
- * jquery.stapel.js v1.0.0
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- *
- * Copyright 2012, Codrops
- * http://www.codrops.com
- */
 (function ($, window, undefined) {
   "use strict";
-
-  /*
-   * debouncedresize: special jQuery event that happens once after a window resize
-   *
-   * latest version and complete README available on Github:
-   * https://github.com/louisremi/jquery-smartresize/blob/master/jquery.debouncedresize.js
-   *
-   * Copyright 2011 @louis_remi
-   * Licensed under the MIT license.
-   */
   var $event = $.event,
     $special,
     resizeTimeout;
@@ -406,15 +386,13 @@
             var extraStyle = { visibility: "hidden" };
             $el.css(extraStyle).data("extraStyle", extraStyle);
           } else if (pile.substr(0, 6) !== "nopile") {
-            $el
-              .data("front", true)
-              .append(
-                '<div class="tp-title"><span>' +
-                  pile +
-                  "</span><span>" +
-                  len +
-                  "</span></div>"
-              );
+            // $el.data("front", true).append(
+            //   `<div class="tp-title"><span>
+            //       ${pile}
+            //       </span><span>
+            //       ${len - 1}
+            //       </span></div>`
+            // );
           }
 
           $el.css(styleCSS).data({
@@ -558,7 +536,7 @@
 
           if (pile === this.pileName) {
             if ($item.data("front")) {
-              $item.find("div.tp-title").hide();
+              // $item.find("div.tp-title").hide();
             }
 
             if (i < len - 1) {
@@ -721,7 +699,7 @@
                     ++cnt;
 
                     if ($el.data("front")) {
-                      $el.find("div.tp-title").show();
+                      // $el.find("div.tp-title").show();
                     }
 
                     if (cnt === $el.data("pileCount")) {
