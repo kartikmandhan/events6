@@ -1,4 +1,4 @@
-(function ($, window, undefined) {
+(function () {
   "use strict";
   var $event = $.event,
     $special,
@@ -812,4 +812,4 @@
 
     return instance;
   };
-})(jQuery, window);
+})();
